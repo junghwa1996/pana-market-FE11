@@ -38,19 +38,8 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@babel/core": "^7.25.7",
-    "@babel/preset-env": "^7.25.7",
-    "@babel/preset-react": "^7.25.7",
-    "babel-loader": "^9.2.1"
-=======
-    "sass": "^1.79.4",
-=======
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "sass": "^1.79.5",
->>>>>>> React-양정화-sprint6
     "sass-loader": "^16.0.2"
->>>>>>> React-양정화-sprint6
   }
 }
