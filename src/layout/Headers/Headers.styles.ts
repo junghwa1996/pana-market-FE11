@@ -18,6 +18,7 @@ const StlyedContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   gap: 3.2rem;
 
   ${media.mo`

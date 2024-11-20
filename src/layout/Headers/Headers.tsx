@@ -13,9 +13,11 @@ function Headers({ hasLogin }: HeadersProps) {
     <HeaderContainer>
       <StlyedContainer>
         <Logo />
-        <Navigation />
         {hasLogin ? (
-          <ProfileImage />
+          <>
+            <Navigation />
+            <ProfileImage />
+          </>
         ) : (
           <Button href='/login' color='blue' size='medium'>
             로그인
