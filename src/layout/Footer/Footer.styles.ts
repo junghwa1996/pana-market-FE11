@@ -7,9 +7,6 @@ export const StyledFooter = styled.footer`
   height: 16rem;
   padding-top: 3.2rem;
   background-color: var(--gray-900);
-  ${media.mo`
-    padding: 3.2rem; 
-  `}
 `;
 
 export const FooterContainer = styled(Container)`
@@ -17,12 +14,16 @@ export const FooterContainer = styled(Container)`
   justify-content: space-between;
   ${media.mo`
     flex-wrap: wrap;
-    gap: 6rem 0;
+    gap: 2.5rem 0;
+    justify-content: center;
   `}
 `;
 
 export const FooterItem = styled.div`
   ${font('16')}
+  ${media.mo`
+    flex-basis: 100%;
+  `}
   &.text-copyright {
     ${media.mo`
       order: 2;
@@ -40,6 +41,7 @@ export const FooterItem = styled.div`
     gap: 3rem;
     ${media.mo`
       flex: 1;
+      flex-basis: 50%;
     `}
     a {
       color: var(--gray-200);
@@ -53,6 +55,8 @@ export const FooterItem = styled.div`
     gap: 1.2rem;
     ${media.mo`
       flex: 1;
+      flex-basis: 50%;
+      justify-content: flex-end;
     `}
   }
 `;

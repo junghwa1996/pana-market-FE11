@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { media } from './media.styles';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -186,18 +187,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
 /* 태블릿 */
-@media screen and (min-width: 768px) and (max-width: 1248px) {
+${media.ta`
   html {
     font-size: 1.3021vw;
   }
-}
+`}
+
 
 /* 모바일 */
-@media screen and (max-width: 767px) {
+${media.mo`
   html {
     font-size: 2.66667vw;
   }
-}
+`}
 `;
 
 export default GlobalStyle;

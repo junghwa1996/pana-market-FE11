@@ -69,6 +69,9 @@ const StyledFeature = styled.section`
         ${media.ta`
           margin-bottom: 1.6rem;
         `}
+        ${media.mo`
+          ${font('16b')}
+        `}
       }
 
       .title {
@@ -82,6 +85,10 @@ const StyledFeature = styled.section`
         ${media.ta`
           ${font('32b')}
         `}
+        ${media.mo`
+          margin-bottom: 1.6rem;
+          ${font('24b')}
+        `}
       }
 
       .desc {
@@ -89,6 +96,9 @@ const StyledFeature = styled.section`
         letter-spacing: -0.05rem;
         ${media.ta`
           ${font('18m')}
+        `}
+        ${media.mo`
+          ${font('16m')}
         `}
       }
     }

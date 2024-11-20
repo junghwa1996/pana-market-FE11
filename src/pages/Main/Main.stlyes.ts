@@ -8,7 +8,7 @@ import { flexColumn } from '../../styles/layout.styles';
 
 const MainPage = styled(Page)`
   background-color: #fff;
-  padding-bottom: 0;
+  padding: 7rem 0 0;
   ${media.tamo`
     background-color: #fcfcfc;
   `}
@@ -28,6 +28,9 @@ const MainConteiner = styled(Container)`
     justify-content: space-between;
     background-position: center 100%;
     max-width: 100%;
+  `}
+  ${media.mo`
+    background-size: 44.8rem 20.4rem;
   `}
 `;
 
@@ -49,6 +52,9 @@ const MainKvContent = styled.div`
   ${media.ta`
     margin-top: 8.4rem;
   `}
+  ${media.mo`
+    margin-top: 4.8rem;
+  `}
   h2 {
     ${font('40b')}
     margin-bottom: 3.2rem;
@@ -61,6 +67,10 @@ const MainKvContent = styled.div`
         display: none;
       }
     `}
+    ${media.mo`
+      margin-bottom: 1.8rem;
+      ${font('32b')}
+    `}
   }
 `;
 
@@ -69,6 +79,10 @@ const MainFeaturesContainer = styled(Container)`
   gap: 5.2rem;
   ${media.ta`
     margin: 2.4rem auto 5.6rem;
+  `}
+  ${media.mo`
+    margin: 5.2rem auto 8.3rem;
+    gap: 4rem;
   `}
 `;
 
@@ -98,6 +112,9 @@ const MainBannerContainer = styled(Container)`
     background-position: center 100%;
     max-width: 100%;
   `}
+  ${media.mo`
+    background-size: 37.5rem 19.8rem; 
+  `}
   p {
     white-space: nowrap;
     ${font('40b')}
@@ -108,6 +125,10 @@ const MainBannerContainer = styled(Container)`
     `}
     ${media.ta`
       margin-top: 20.1rem; 
+    `}
+    ${media.mo`
+      margin-top: 12.1rem; 
+      ${font('32b')}
     `}
   }
 `;

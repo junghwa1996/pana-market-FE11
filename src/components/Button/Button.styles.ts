@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import font from '../../styles/fontStyle.styles';
+import { media } from '../../styles/media.styles';
 
 const colorStyles = {
   blue: {
@@ -67,6 +68,11 @@ const StyledButton = styled.button<StyledButtonProps>`
     background-color: ${({ $color }) =>
       colorStyles[$color]?.hover || colorStyles[$color]?.default};
   }
+
+  ${media.mo`
+    ${({ $size }) => $size === 'large' && font('18sb')}
+    padding: ${({ $size }) => $size === 'large' && '1.1rem 7.1rem'}
+  `}
 `;
 
 export default StyledButton;
