@@ -1,0 +1,10 @@
+{
+  "HeartButton": [
+    {
+      "propName": "count",
+      "propType": "number",
+      "defaultValue": "100"
+    }
+  ],
+  "Button": []
+}
