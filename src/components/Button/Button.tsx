@@ -3,7 +3,7 @@ import StyledButton from './Button.styles';
 
 interface ButtonProps {
   color: 'blue' | 'gray' | 'white' | 'none';
-  size?: 'small' | 'medium';
+  size?: 'small' | 'medium' | 'large';
   round?: boolean;
   wide?: boolean;
   children: ReactNode;

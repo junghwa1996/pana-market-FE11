@@ -32,7 +32,7 @@ type ColorType = keyof typeof colorStyles;
 
 interface StyledButtonProps {
   $color: ColorType;
-  $size?: 'small' | 'medium';
+  $size?: 'small' | 'medium' | 'large';
   $round?: boolean;
   $wide?: boolean;
 }
@@ -55,8 +55,13 @@ const StyledButton = styled.button<StyledButtonProps>`
 
   ${({ $size }) => $size === 'small' && font('16sb')}
   ${({ $size }) => $size === 'medium' && font('18sb')}
+  ${({ $size }) => $size === 'large' && font('20sb')}
   padding: ${({ $size }) =>
-    $size === 'small' ? '0.8rem 2.3rem' : '1.1rem 3.95rem'};
+    $size === 'small'
+      ? '0.8rem 2.3rem'
+      : $size === 'medium'
+      ? '1.1rem 3.95rem'
+      : '1.2rem 12.4rem'};
 
   &:hover {
     background-color: ${({ $color }) =>
