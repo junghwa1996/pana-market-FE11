@@ -3,7 +3,7 @@ import { media } from './media.styles';
 import styled from 'styled-components';
 
 export const Page = styled.main`
-  padding: 9.4rem 0;
+  padding: 7rem 0;
   background-color: #fcfcfc;
   width: 100%;
   height: auto;
