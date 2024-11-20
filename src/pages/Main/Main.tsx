@@ -1,11 +1,11 @@
 import Button from '../../components/Button/Button';
-import { Container } from '../../styles/Common.styles';
 import Feature from './Feature';
 import {
   Kv,
   MainBanner,
   MainBannerContainer,
   MainConteiner,
+  MainFeaturesContainer,
   MainKvContent,
   MainPage,
 } from './Main.stlyes';
@@ -59,15 +59,13 @@ function Main() {
                 일상의 모든 물건을 <br />
                 거래해 보세요
               </h2>
-              <div className='btn-cta'>
-                <Button href='/items' color='blue' round wide>
-                  구경하러 가기
-                </Button>
-              </div>
+              <Button href='/items' color='blue' size='large' round>
+                구경하러 가기
+              </Button>
             </MainKvContent>
           </MainConteiner>
         </Kv>
-        <Container>
+        <MainFeaturesContainer>
           {features.map((feature) => (
             <Feature
               key={feature.tag}
@@ -77,7 +75,7 @@ function Main() {
               desc={feature.desc}
             />
           ))}
-        </Container>
+        </MainFeaturesContainer>
         <MainBanner>
           <MainBannerContainer>
             <p>
