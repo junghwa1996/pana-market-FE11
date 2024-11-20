@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import ICON_FACEBOOK from '@assets/ic_facebook.png';
-import ICON_INSTAGRAM from '@assets/ic_instagram.png';
-import ICON_TWITTER from '@assets/ic_twitter.png';
-import ICON_YOUTUBE from '@assets/ic_youtube.png';
+import ICON_FACEBOOK from '/ic_facebook.png';
+import ICON_INSTAGRAM from '/ic_instagram.png';
+import ICON_TWITTER from '/ic_twitter.png';
+import ICON_YOUTUBE from '/ic_youtube.png';
 
 type StyledLinkSnsProps = {
   $name: string;

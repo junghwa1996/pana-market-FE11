@@ -10,12 +10,12 @@ import {
   MainPage,
 } from './Main.stlyes';
 
-import IMG_HOME_01 from '../../../dist/Img_home_01.png';
-import IMG_HOME_01_TA from '../../../dist/Img_home_01_ta.png';
-import IMG_HOME_02 from '../../../dist/Img_home_02.png';
-import IMG_HOME_02_TA from '../../../dist/Img_home_02_ta.png';
-import IMG_HOME_03 from '../../../dist/Img_home_03.png';
-import IMG_HOME_03_TA from '../../../dist/Img_home_03_ta.png';
+import IMG_HOME_01 from '/Img_home_01.png';
+import IMG_HOME_01_TA from '/Img_home_01_ta.png';
+import IMG_HOME_02 from '/Img_home_02.png';
+import IMG_HOME_02_TA from '/Img_home_02_ta.png';
+import IMG_HOME_03 from '/Img_home_03.png';
+import IMG_HOME_03_TA from '/Img_home_03_ta.png';
 import Footer from '../../layout/Footer/Footer';
 
 const features = [

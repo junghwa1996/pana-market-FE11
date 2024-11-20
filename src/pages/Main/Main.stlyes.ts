@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { Container, Page } from '../../styles/Common.styles';
-import IMG_HOME_TOP from '../../../dist/Img_home_top.png';
-import IMG_HOME_BOTTOM from '../../../dist/Img_home_bottom.png';
+import IMG_HOME_TOP from '/img_home_top.png';
+import IMG_HOME_BOTTOM from '/img_home_bottom.png';
 import font from '../../styles/fontStyle.styles';
 import { media } from '../../styles/media.styles';
 import { flexColumn } from '../../styles/layout.styles';
