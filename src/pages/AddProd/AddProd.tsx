@@ -71,7 +71,9 @@ function AddProd() {
         <AddProdForm>
           <AddProdTitle>
             <h2>상품 등록하기</h2>
-            <Button color='blue' disabled={!isFormValid}>
+            <Button
+              color={isFormValid ? 'blue' : 'gray'}
+              disabled={!isFormValid}>
               등록
             </Button>
           </AddProdTitle>
