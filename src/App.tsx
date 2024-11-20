@@ -4,10 +4,11 @@ import AppRoutes from './routes/AppRoutes';
 
 function App() {
   const location = useLocation();
+  const hasLogin = false;
   return (
     <>
       {location.pathname !== '/login' && location.pathname !== '/notfound' && (
-        <Headers />
+        <Headers hasLogin={hasLogin} />
       )}
       <AppRoutes />
     </>
