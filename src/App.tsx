@@ -1,17 +1,19 @@
 import { useLocation } from 'react-router-dom';
-import Headers from './layout/Headers/Headers';
 import AppRoutes from './routes/AppRoutes';
+import { AuthProvider } from './context/AuthContext';
+
+import Headers from './layout/Headers/Headers';
 
 function App() {
   const location = useLocation();
-  const hasLogin = false;
+
   return (
-    <>
+    <AuthProvider>
       {location.pathname !== '/login' && location.pathname !== '/notfound' && (
-        <Headers hasLogin={hasLogin} />
+        <Headers />
       )}
       <AppRoutes />
-    </>
+    </AuthProvider>
   );
 }
 

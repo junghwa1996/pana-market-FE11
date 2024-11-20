@@ -7,11 +7,13 @@ import Boards from '../pages/Boards';
 import Login from '../pages/Login';
 import ProdDetailPage from '../pages/ProdDetail/ProdDetailPage';
 import Test from '../pages/Test/Test';
+import LoginPage from '../pages/Login/LoginPage';
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path='/' element={<Main />} />
+      <Route path='/login' element={<LoginPage />} />
       <Route path='test' element={<Test />} />
       <Route path='boards' element={<Boards />} />
       <Route path='items'>
