@@ -1,25 +1,29 @@
 import styled from 'styled-components';
-import UserInfo from '../UserInfo/UserInfo';
+import UserInfo from '../../components/UserInfo/UserInfo';
 import IMG_BEST from '/img_badge.svg';
 import font from '../../styles/fontStyle.styles';
 import { media } from '../../styles/media.styles';
 import { formatRegistrationDate } from '../../utils/format';
 
-interface BoardCard {
+interface Writer {
+  nickname: string;
+}
+
+export interface BoardCardProps {
   title: string;
   likeCount: number;
   updatedAt: string;
-  nickname: string;
   image: string;
+  writer: Writer;
 }
 
 function BoardCard({
   title = '타이틀',
   likeCount = 0,
   updatedAt = '',
-  nickname = '닉네임',
+  writer = { nickname: '닉네임' },
   image = '',
-}: BoardCard) {
+}: BoardCardProps) {
   return (
     <BoardCardContainer>
       <BoardCardBestBege src={IMG_BEST} alt='Best 뱃지' />
@@ -30,7 +34,7 @@ function BoardCard({
         </BoardCardProdImagesArea>
       </BoardCardTitleArea>
       <UserInfo wide>
-        <UserInfo.UserName userName={nickname} />
+        <UserInfo.UserName userName={writer.nickname} />
         <UserInfo.Heart count={likeCount} size='sm' wide />
         <UserInfo.Date date={formatRegistrationDate(updatedAt)} />
       </UserInfo>
@@ -76,10 +80,11 @@ const BoardCardTitleArea = styled.div`
   }
 `;
 
-const BoardCardProdImagesArea = styled.div`
+export const BoardCardProdImagesArea = styled.div`
   width: 7.2rem;
   height: 7.2rem;
   border-radius: 0.6rem;
+  overflow: hidden;
   border: 1px solid var(--gray-200);
 `;
 

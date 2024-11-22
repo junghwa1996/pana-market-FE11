@@ -1,4 +1,4 @@
-const API_URL = 'https://panda-market-api.vercel.app';
+import { fetchApi } from '../utils/fetchApi';
 
 interface Product {
   id: string;
@@ -17,23 +17,6 @@ interface ProductListParams {
   orderBy?: 'recent' | 'favorite';
   keyword?: string;
   page?: number;
-}
-
-async function fetchApi(endpoint: string, options = {}) {
-  const url = `${API_URL}${endpoint}`;
-  try {
-    const response = await fetch(url, options);
-    if (!response.ok) {
-      throw new Error('서버에서 오류 응답을 받았습니다.');
-    }
-    return await response.json();
-  } catch (error: unknown) {
-    const errorMessage =
-      error instanceof Error
-        ? error.message
-        : '데이터를 불러오는데 실패했습니다.';
-    throw new Error(errorMessage);
-  }
 }
 
 export async function getProductsDetail(productId: string | undefined) {

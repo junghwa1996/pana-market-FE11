@@ -3,7 +3,7 @@ import Main from '../pages/Main/Main';
 import ItemsPage from '../pages/Items/ItemsPage';
 import AddProd from '../pages/AddProd/AddProd';
 import Notfound from '../pages/Notfound';
-import Boards from '../pages/Boards/Boards';
+import BoardsPage from '../pages/Boards/BoardsPage';
 import Login from '../pages/Login';
 import ProdDetailPage from '../pages/ProdDetail/ProdDetailPage';
 import Test from '../pages/Test/Test';
@@ -15,7 +15,7 @@ function AppRoutes() {
       <Route path='/' element={<Main />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='test' element={<Test />} />
-      <Route path='boards' element={<Boards />} />
+      <Route path='boards' element={<BoardsPage />} />
       <Route path='items'>
         <Route index element={<ItemsPage />} />
         <Route path=':productId' element={<ProdDetailPage />} />

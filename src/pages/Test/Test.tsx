@@ -9,7 +9,7 @@ import Input from '../../components/Input/Input';
 import ComentPost from '../../components/Coment/ComentPost';
 import BtnClose from '../../components/Shared/BtnClose/BtnClose';
 import Tag from '../../components/Tags/Tag';
-import BoardCard from '../../components/BoardCard/BoardCard';
+import BoardCard from '../Boards/BoardCard';
 
 function Test() {
   return (
@@ -194,7 +194,7 @@ function Test() {
                     title='게시글타이틀'
                     likeCount={0}
                     updatedAt='2024-11-16T17:45:25.867Z'
-                    nickname='닉네임'
+                    writer={{ nickname: '닉네임' }}
                     image='https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/363/1731779125680/da.jpg'
                   />
                 </TdContainer>

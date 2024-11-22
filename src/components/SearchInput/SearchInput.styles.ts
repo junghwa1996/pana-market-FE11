@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import { media } from '../../styles/media.styles';
 import ICON_SEARCH from '/ic_search.svg';
 
-const StyledForm = styled.form`
-  width: 32.5rem;
+type StyledFormProps = {
+  $wide: boolean;
+};
+
+const StyledForm = styled.form<StyledFormProps>`
+  width: ${({ $wide }) => ($wide ? '100%' : '32.5rem')};
 
   input {
     width: 100%;
@@ -23,12 +27,12 @@ const StyledForm = styled.form`
   }
 
   ${media.ta`
-    width: 24.2rem;
+    width: ${({ $wide }) => ($wide ? '100%' : '24.2rem')};
   `}
 
   ${media.mo`
     order: 3;
-    width: 28.8rem;
+    width: ${({ $wide }) => ($wide ? '100%' : '28.8rem')};
   `}
 `;
 
