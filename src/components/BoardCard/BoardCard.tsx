@@ -1,0 +1,86 @@
+import styled from 'styled-components';
+import UserInfo from '../UserInfo/UserInfo';
+import IMG_BEST from '/img_badge.svg';
+import font from '../../styles/fontStyle.styles';
+import { media } from '../../styles/media.styles';
+import { formatRegistrationDate } from '../../utils/format';
+
+interface BoardCard {
+  title: string;
+  likeCount: number;
+  updatedAt: string;
+  nickname: string;
+  image: string;
+}
+
+function BoardCard({
+  title = '타이틀',
+  likeCount = 0,
+  updatedAt = '',
+  nickname = '닉네임',
+  image = '',
+}: BoardCard) {
+  return (
+    <BoardCardContainer>
+      <BoardCardBestBege src={IMG_BEST} alt='Best 뱃지' />
+      <BoardCardTitleArea>
+        <h3>{title}</h3>
+        <BoardCardProdImagesArea>
+          <img src={image} alt='상품 이미지' />
+        </BoardCardProdImagesArea>
+      </BoardCardTitleArea>
+      <UserInfo wide>
+        <UserInfo.UserName userName={nickname} />
+        <UserInfo.Heart count={likeCount} size='sm' wide />
+        <UserInfo.Date date={formatRegistrationDate(updatedAt)} />
+      </UserInfo>
+    </BoardCardContainer>
+  );
+}
+
+const BoardCardContainer = styled.div`
+  background-color: var(--gray-50);
+  border-radius: 0.8rem;
+  padding: 0 2.4rem 1.6rem;
+  width: 38.4rem;
+  height: auto;
+  ${media.ta`
+    width: 34rem;
+  `}
+  ${media.mo`
+    width: 34.3rem;
+  `}
+`;
+
+const BoardCardBestBege = styled.img`
+  width: 10.2rem;
+  height: 3rem;
+  margin-bottom: 1.6rem;
+`;
+
+const BoardCardTitleArea = styled.div`
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  ${media.tamo`
+    margin-bottom: 4rem;
+    gap: 4rem;
+  `}
+
+  h3 {
+    ${font('20sb')}
+    ${media.tamo`
+      ${font('18sb')}
+    `}
+  }
+`;
+
+const BoardCardProdImagesArea = styled.div`
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--gray-200);
+`;
+
+export default BoardCard;

@@ -3,7 +3,7 @@ import Main from '../pages/Main/Main';
 import ItemsPage from '../pages/Items/ItemsPage';
 import AddProd from '../pages/AddProd/AddProd';
 import Notfound from '../pages/Notfound';
-import Boards from '../pages/Boards';
+import Boards from '../pages/Boards/Boards';
 import Login from '../pages/Login';
 import ProdDetailPage from '../pages/ProdDetail/ProdDetailPage';
 import Test from '../pages/Test/Test';

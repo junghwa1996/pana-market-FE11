@@ -9,6 +9,7 @@ import Input from '../../components/Input/Input';
 import ComentPost from '../../components/Coment/ComentPost';
 import BtnClose from '../../components/Shared/BtnClose/BtnClose';
 import Tag from '../../components/Tags/Tag';
+import BoardCard from '../../components/BoardCard/BoardCard';
 
 function Test() {
   return (
@@ -55,7 +56,7 @@ function Test() {
               <Td>Tag</Td>
               <Td>
                 <TdContainer>
-                  <Tag tag='태그 삭제 없음' onRemove={() => {}} />
+                  <Tag tag='태그 삭제 없음' />
                   <Tag tag='태그 삭제 있음' onRemove={() => {}} />
                 </TdContainer>
               </Td>
@@ -181,6 +182,20 @@ function Test() {
                   <ComentPost
                     title='댓글달기'
                     placeholder='댓글을 입력해주세요.'
+                  />
+                </TdContainer>
+              </Td>
+            </tr>
+            <tr>
+              <Td>BoardCard</Td>
+              <Td>
+                <TdContainer>
+                  <BoardCard
+                    title='게시글타이틀'
+                    likeCount={0}
+                    updatedAt='2024-11-16T17:45:25.867Z'
+                    nickname='닉네임'
+                    image='https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/363/1731779125680/da.jpg'
                   />
                 </TdContainer>
               </Td>
